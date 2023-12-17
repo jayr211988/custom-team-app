@@ -2,6 +2,7 @@
 "use client"
 
 import {Container, Flex, Heading, Text, Table,TextFieldInput, Separator} from '@radix-ui/themes';
+import EmptyMessage from './EmptyMessage';
 import ErrorMessage from './ErrorMessage';
 import LoadingMessage from './LoadingMessage';
 import numberWithCommas from '@/utils/numberWithComma';
@@ -12,6 +13,7 @@ export default  function DashBoardTable() {
   const [contracts, setContracts] = useState(null)
   const [isLoading, setLoading] = useState(true)
   const [searchText, setSearchText] = useState('')
+  const [hasError, setHasError] = useState(false)
  
   useEffect(() => {
     console.time();
@@ -20,17 +22,20 @@ export default  function DashBoardTable() {
       .then((data) => {
         setContracts(data)
         setLoading(false)
+        setHasError(false)
         console.timeEnd();
       },
       (error) => {
-        setLoading(true);
+        setLoading(false);
+        setHasError(true)
         console.log(error, 'has error in api');
         console.timeEnd();
       })
   }, [])
  
   if (isLoading) return <LoadingMessage/>
-  if (!contracts) return <ErrorMessage/>
+  if (hasError) return <ErrorMessage/>
+  if (!contracts) return <EmptyMessage/>
 
   return (
       <div id="contract-table"> 

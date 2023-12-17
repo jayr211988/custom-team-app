@@ -14,7 +14,7 @@
 
 .navbar-right-container {
     display: flex;
-    width: 230px;
+    width: 170px;
     justify-content: space-around;
     align-items: center;
 }
@@ -42,12 +42,6 @@
 
 /* Contact Tables Styles */
 
-#contract-table{
-    /* display: block;
-    height: 400px;
-    overflow: auto; */
-    
-}
 #contract-table tbody {
     display: block;
     height: 450px;
@@ -56,8 +50,8 @@
 #contract-table thead, tbody tr {
     display: table;
     width: 100%;
-    table-layout: fixed;/* even columns width , fix width of table too*/
+    table-layout: fixed; 
 }
 #contract-table thead {
-    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+    width: calc( 100% - 1em ) 
 }
