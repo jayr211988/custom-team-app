@@ -23,7 +23,7 @@ export default  function DashBoardTable() {
         console.timeEnd();
       },
       (error) => {
-        setIsLoaded(true);
+        setLoading(true);
         console.log(error, 'has error in api');
         console.timeEnd();
       })
