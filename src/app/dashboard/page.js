@@ -7,16 +7,15 @@ async function getDetails() {
 }
 
 export default async function DashboardPages() {
-    const details = await getDetails();
-    console.log(details, 'details')
+    // const details = await getDetails();
     return <div>
         <h1>Notes Pages</h1>
-        <ul className="list-disc">
+        {/* <ul className="list-disc">
             {details.map((post, i) => (
                 <li className="travelcompany-input" key={i}>
                     <span className="input-label">id: {post['userId']} Name: {post['title']}</span>
                 </li>
             ))}
-        </ul>
+        </ul> */}
     </div>
 }
