@@ -1,9 +1,7 @@
 
-import {Container,Flex,Heading, } from '@radix-ui/themes';
-import * as Form from '@radix-ui/react-form';
+import { Heading } from '@radix-ui/themes';
 
-
-const HeaderNavigation = async () => (
+const HeaderNavigation = () => (
   <navbar id='navbar'>
     <div className='navbar-left-container'>
         <div className='icons-cm'>

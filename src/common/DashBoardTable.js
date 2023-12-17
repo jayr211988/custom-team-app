@@ -1,4 +1,3 @@
-
 "use client"
 
 import {Container, Flex, Heading, Text, Table,TextFieldInput, Separator} from '@radix-ui/themes';
@@ -8,11 +7,10 @@ import LoadingMessage from './LoadingMessage';
 import numberWithCommas from '@/utils/numberWithComma';
 import { useEffect, useState } from 'react';
 
-export default  function DashBoardTable() {
+export default function DashBoardTable() {
   
   const [contracts, setContracts] = useState(null)
   const [isLoading, setLoading] = useState(true)
-  const [searchText, setSearchText] = useState('')
   const [hasError, setHasError] = useState(false)
  
   useEffect(() => {
@@ -44,7 +42,6 @@ export default  function DashBoardTable() {
           <TextFieldInput 
             placeholder="Search by contract number" 
             style={{width: '200px'}}
-            // onChange={({target: {value}})=>setSearchText(value)}
           />
         </div>
         <Separator color='transparent' size={2} style={{height: '20px', background: 'transparent'}}/>

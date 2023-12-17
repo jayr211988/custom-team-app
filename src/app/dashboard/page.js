@@ -6,7 +6,7 @@ async function getDetails() {
     return response;
 }
 
-export default async function DashboardPages() {
+export default function DashboardPages() {
     // const details = await getDetails();
     return <div>
         <h1>Notes Pages</h1>
