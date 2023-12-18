@@ -1,21 +1,15 @@
 
+import {Container} from '@radix-ui/themes';
+import DashBoardTable from '@/common/DashBoardTable';
 
-async function getDetails() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-    const response =  await res.json()
-    return response;
-}
 
-export default function DashboardPages() {
-    // const details = await getDetails();
-    return <div>
-        <h1>Notes Pages</h1>
-        {/* <ul className="list-disc">
-            {details.map((post, i) => (
-                <li className="travelcompany-input" key={i}>
-                    <span className="input-label">id: {post['userId']} Name: {post['title']}</span>
-                </li>
-            ))}
-        </ul> */}
-    </div>
+export default function Home() {
+  
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-10">
+      <Container size={1}>
+        <DashBoardTable isPagination/>
+      </Container>
+    </main>
+  )
 }

@@ -1,7 +1,6 @@
 
-import {Container,Flex,Heading} from '@radix-ui/themes';
+import {Container} from '@radix-ui/themes';
 import DashBoardTable from '@/common/DashBoardTable';
-
 
 export default function Home() {
   

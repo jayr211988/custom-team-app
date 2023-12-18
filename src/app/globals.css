@@ -55,3 +55,9 @@
 #contract-table thead {
     width: calc( 100% - 1em ) 
 }
+
+/* Pagination */
+.pagination-container .pagination-btn {
+    border: '1px solid red';
+    cursor: pointer;
+}
