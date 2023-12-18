@@ -15,7 +15,7 @@ export default function DashBoardTable() {
  
   useEffect(() => {
     console.time();
-    fetch('http://64.227.105.223/api/contract-all',{
+    fetch('https://demoapi.jcadevdomain.com/api/contract-all',{
       headers: {
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Origin': '*',
@@ -23,8 +23,8 @@ export default function DashBoardTable() {
       }
     })
       .then((res) => res.json())
-      .then((data) => {
-        setContracts(data)
+      .then((contracts) => {
+        setContracts(contracts)
         setLoading(false)
         setHasError(false)
         console.timeEnd();
